@@ -1,0 +1,3 @@
+$("div[picture_id=<%= @picture.id %>] span").attr('class', '<%= @picture.heart_class(current_user)%>')
+
+$("div[picture_id=<%= @picture.id %>]").parent().next().html('<%= j @picture.likes_message(current_user)%>')
